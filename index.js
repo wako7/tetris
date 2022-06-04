@@ -143,7 +143,6 @@ canvas.style.border = "4px solid #555";
 //Nextに次のテトロミノを表示させる領域を確保
 next.width = next_screen;
 next.height = next_screen;
-next.style.border = "4px solid #555";
 let next_context = next.getContext("2d");    //テトロミノを描画する
 ////////////////////////////////////////////////////////////////////
 
@@ -225,6 +224,7 @@ function next_drawBlock(x, y, c)
   next_context.fillRect(px, py, block_size, block_size);//fillRect(x, y, w, h)メソッドは、塗りつぶしの四角形を描く
   next_context.strokeStyle = "black";    //線の色
   next_context.strokeRect(px, py, block_size, block_size);  //strokeRect(x, y, w, h)メソッドは、輪郭の四角形を描く
+  next_context.textAlign = "right";
 }
 /////////////////////////////////////////////////
 
@@ -418,12 +418,12 @@ function scores()
 
 //////////////////////////////////////////////////////////////////////////////////
 
-//LineCoutが10の倍数になったらスピードアップ
+//LineCoutが3の倍数になったらスピードアップ
 function speed_Up()
 {
-  if (lineCount > 9)  //LineCout0~9は処理を行わない
+  if (lineCount > 2)  //LineCout0~9は処理を行わない
   {
-    if ((lineCount % 10) == 0)  //10で割り切れたら処理を行う
+    if ((lineCount % 3) == 0)  //で割り切れたら処理を行う
     {
       clearInterval(timeArray.shift());  //配列内の繰り返し処理を止める
       game_speed = game_speed -100;

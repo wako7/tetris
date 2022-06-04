@@ -8,6 +8,7 @@ main{
 }
 
 h1 {
+  margin-left: 20px;
   color: aquamarine;
 }
 
@@ -15,12 +16,16 @@ h1 {
   font-size: 30px;
   font-weight: bold;
   color: blue;
-  text-align: right;
+  text-align: center;
 }
 
 #score {
   font-size: 30px;
   font-weight: bold;
   color: blue;
-  text-align: right;
+  text-align: center;
+}
+
+#next {
+ margin-left: 50px;
 }
