@@ -284,8 +284,7 @@ function drawTetro()
         //引数tetro_tにはランダムで返した値が入っているのでtetro_color[]の指定ができる
       }      
     }  
-  }
-  
+  }  
 
   
   //ゲームオーバーのフラグが立ったらGAME OVERと表示する
